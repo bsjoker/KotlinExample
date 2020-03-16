@@ -23,7 +23,7 @@ object UserHolder {
     .also { user ->
         if (!map.containsKey(rawPhone)) {
             map[rawPhone] = user
-        } else throw IllegalArgumentException("A user with this email already exists")
+        } else throw IllegalArgumentException("A user with this phone already exists")
     }
 
     fun  loginUser(login: String, password: String): String? =
